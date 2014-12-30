@@ -274,6 +274,7 @@ Usage of `with-policy':
         (recover `(recover ,policy))
         (name `(name ,policy))
         (params `(parameters ,policy)))
+    (declare (ignore params))
     `(let ((log-id (first (cram-language::on-with-policy-begin
                            ,name ()))))
        (let ((policy-symbol-storage (make-fluent)))
