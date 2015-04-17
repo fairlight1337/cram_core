@@ -79,7 +79,6 @@
 
 (defpackage :cram-utilities
   (:use :common-lisp :alexandria)
-  (:shadow #:extremum)
   (:nicknames :cut)
   #.`(:import-from :sb-thread             #:thread ,@+semaphore-symbols+)
   #.`(:import-from :sb-concurrency        ,@+queue-symbols+)
@@ -161,7 +160,7 @@
       #:degrees->radians
       #:radians->degrees
       ;; utils
-      #:minimum #:maximum #:extremum #:compare
+      #:minimum #:maximum #:compare
       #:execute-string
       ;; semaphores, reexported from sb-thread
       ,@+semaphore-symbols+
